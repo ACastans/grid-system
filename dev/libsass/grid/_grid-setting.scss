@@ -1,6 +1,9 @@
-/* Website Gutters - Left:10px - Between Modules:20px - Right:10px
------------------------------------------ */
-$website-horizontal-gutters: 0.625rem;
+$grid-sizing:true; 				// Constrain grid with dimension
+
+$responsive-liquid:true; 			// Liquid responsive mode
+$responsive-liquid-1col:false; 		// Liquid responsive mode 1 col only
+
+$grid-vertical-gutters: 0.3125rem; 	// Website verticals Gutters 
 
 /* MediaQueries Aggressive Breakpoints (next converted into EM units)
 ----------------------------------------- */
@@ -12,13 +15,13 @@ $mq-large-bp   : 1300px; // 1280px 4cols size + 20px scrollbar size
 
 	/* Website dimensions
 	----------------------------------------- */
-	$website-4cols-size : 80rem; // 1280px = 1260 + 20 gutters
-	$website-3cols-size : 60rem; // 960px  = 940  + 20 gutters
-	$website-2cols-size : 40rem; // 640px  = 620  + 20 gutters 
-	$website-1col-size  : 20rem; // 300px  = 280  + 20 gutters
+	$grid-4cols-size : 80rem; // 1280px = 1260 + 20 gutters
+	$grid-3cols-size : 60rem; // 960px  = 940  + 20 gutters
+	$grid-2cols-size : 40rem; // 640px  = 620  + 20 gutters 
+	$grid-1col-size  : 20rem; // 300px  = 280  + 20 gutters
 
 	@if($responsive-liquid-1col == true){
-		$website-1col-size  : 32.1875rem; // 515px
+		$grid-1col-size  : 32.1875rem; // 515px
 	}
 
 	/* MediaQueries Liquid Breakpoints (next converted into EM units)
@@ -39,29 +42,30 @@ $mq-large-bp   : 1300px; // 1280px 4cols size + 20px scrollbar size
 	.page-top-padding {
 		padding-top:u(1.25rem);
 	}
+	/*
 	.skin-link {
 		display:none; // avoid a skin-link displayed without skin.css injected
 	}
-
+	*/
 	@if ($responsive-liquid == false) {
 
 	/* Agressive responsive mode */
 		.page-wrap {
-			max-width:u($website-4cols-size);
+			max-width:u($grid-4cols-size);
 		}
 		@include mq('large'){
 			.page-wrap {
-				max-width:u($website-3cols-size);
+				max-width:u($grid-3cols-size);
 			}
 		}
 		@include mq('medium'){
 			.page-wrap {
-				max-width:u($website-2cols-size);
+				max-width:u($grid-2cols-size);
 			}
 		}
 		@include mq('small'){
 			.page-wrap {
-				max-width:u($website-1col-size);
+				max-width:u($grid-1col-size);
 			}
 		}
 
@@ -69,24 +73,24 @@ $mq-large-bp   : 1300px; // 1280px 4cols size + 20px scrollbar size
 
 		/* Liquid responsive mode */
 		.page-wrap {
-			max-width:u($website-4cols-size); 
+			max-width:u($grid-4cols-size); 
 		}
 	}
 
 	/* If media-queries are disabled, set the page width equal to the largest col */
 	@if ($media-queries == false) {
 		.page-wrap {
-			width:u($website-4cols-size);
+			width:u($grid-4cols-size);
 		}
 	}
 
 	/* Page wrap fluid isn't related to page wrap and all reponsive stuff */
 	.page-wrap-fluid {
-		max-width:u($website-4cols-size);
+		max-width:u($grid-4cols-size);
 	}
 	@include old-ie {
 		.page-wrap-fluid {
-			width:u($website-4cols-size);
+			width:u($grid-4cols-size);
 		}
 	}
 }

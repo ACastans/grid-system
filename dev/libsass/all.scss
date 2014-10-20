@@ -7,7 +7,7 @@ $media-queries: true;
 @import "lib/_common-mixins.scss";
 @import "lib/_reset.scss";
 
-@import "layout/_website-config.scss";
-@import "layout/_grid-setting.scss";
-@import "layout/_grid.scss";
+@import "grid/_website-config.scss";
+@import "grid/_grid-setting.scss";
+@import "grid/_grid.scss";
 
