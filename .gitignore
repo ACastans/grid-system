@@ -1,0 +1,51 @@
+######################
+## Windows detritus ##
+######################
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac crap
+.DS_Store
+
+*.rb
+#SASS_CACHE_FILE
+.sass-cache
+#SVN_FILE
+.svn
+
+#sublime-text
+.sublime-grunt.cache
+
+#ENV
+rvm.env
+
+#FOLDER
+node_modules
+dist
+
+#MAVEN
+target
+
+# gradle
+.gradle
+build
+
+# --- Eclipse
+.classpath
+.project
+.settings/
+
+# --- Idea
+*.iml
+*.ipr
+*.iws
+*.ids
+.idea

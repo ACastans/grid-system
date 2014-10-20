@@ -1,0 +1,130 @@
+/*
+---
+name: getBreakPoint
+description: returns a breakpoint value from a string
+...
+*/
+
+@function getBreakPoint($size) {
+	
+	$bp:null;
+
+	// if no size is passed, throw a warning
+	@if ($size == null) {
+		@warn 'mq(): Breakpoint size is null';
+	}
+
+	@if ($size == small) {
+		$bp: $mq-small-bp;
+	}
+	@else if ($size == medium) {
+		$bp: $mq-medium-bp;
+	}
+	@else if ($size == large) {
+		$bp: $mq-large-bp;
+	}
+	@else {
+		// if no BP is found, throw a warning
+		@warn 'mq(): Breakpoint \'#{$size}\' does not exist';
+	}
+
+	@return $bp;
+
+}
+
+/*
+---
+name: parseInt
+description: returns a number from a string
+source: http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
+...
+*/
+
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+/*
+---
+name: floatFix
+description: convert number with comma to number with point, using the arguments comma as decimal point.
+example: f(0,625) --> 0.625
+source: https://github.com/mhs/scout-app/issues/111
+issues: not working with numbers < 0.1
+...
+*/
+
+@function floatFix($integer: 0, $decimal: null) {
+
+	$value: $integer; // default in any cases; cut decimals
+
+	@if ($decimal > 0) {
+
+		$d: $decimal; // for init
+		$p: 1;        // counter for decimal places
+
+		// find out how many decimal places are present
+		// = "length of decimal number"
+		// note: truncated by sass::number::precision anyway; 5 digits by default
+		@while $d > 0 {
+			$d: floor($d / 10 ); 
+			$p: $p * 10;
+		}
+
+		// build our floating point decimal
+		$value: $integer + ( $decimal / $p );
+	}
+
+	@return $value;
+
+}
+
+
+/*
+---
+name: u ("u" is for unit)
+description: convert rem values into px values for a specific stylesheet
+source: http://davidwalsh.name/rem-px-browser-function-sass
+updated: add decimal numbers fix for Scout
+example for decimal number: u(0,625unit) --> 0.625unit. Multiples values within u() is not possible when using decimal numbers.
+required: floatFix()
+...
+*/
+
+
+@function u($values, $decimal: null){
+
+	$list: ();
+
+	@each $value in $values {
+
+		// if value is a decimal number, convert comma into point
+		//@if($decimal){
+		//	$value: floatFix($value, $decimal); // useful when using Scout
+		//}
+		
+		@if ($value == 0) or ($value == auto) {
+			$list: append($list, $value);
+		}@else {
+			 
+			$unit : unit($value);     // returns unit only
+			$val  : parseInt($value); // returns number only
+
+			@if ($px-only) and ($unit == 'rem') {
+				$list: append($list, ($val * $pixelBase) + px);
+			}
+
+			@else if($unit == 'px') or ($unit == 'rem'){
+				$list: append($list, $value);
+			}
+
+			@else {
+				@warn 'There is no unit conversion for "#{$unit}"';
+			}
+		}
+
+	}
+
+	@return $list();
+
+}

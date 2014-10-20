@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		
+		<meta charset="UTF-8">
+		<title>RTL Grid System</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="robots" content="index,follow">
+		
+		<!--[if (lt IE 9) & (!IEMobile)]>
+			<link rel="stylesheet" type="text/css" href="{{basePath}}{{cssPath}}all-ie.css">
+		<![endif]-->
+		
+		<!--[if (gt IE 8) | (IEMobile)]><!-->
+			<link rel="stylesheet" type="text/css" href="{{basePath}}{{cssPath}}all.css">
+		<!--<![endif]-->
+
+		<style>
+
+			/* Frontend only */
+			.main-title {
+				padding: 20px 5px;
+				font-family:Georgia, Arial, Helvetica, sans-serif;
+				color:#666;
+				font-size:200%;
+				white-space: nowrap;
+				overflow: hidden;
+				font-weight: normal;
+			}
+			.grid-styles,
+			.grid-substyles {
+				overflow: hidden;
+				margin-bottom: 10px;
+			    background-color:#3498DB;
+			    color:#FFF;
+			    font-family:Arial, Helvetica, sans-serif;
+			    font-size:1.5em;
+			    font-weight:bold;
+			    height:64px;
+			    line-height:64px;
+			    text-align:center;
+			}
+			.grid-substyles {
+			    background-color:#F1C40F;
+				color:#FFF;
+			}
+
+		</style>
+		
+	</head>
+	<body>
+		<h1 class="main-title page-wrap">RTL Grid System</h1>
+		<div class="g-row page-wrap">
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+			<div class="g-col1 g-gutter">
+				<div class="grid-styles">1/12</div>
+			</div>
+		</div>
+		<div class="g-row page-wrap">
+			<div class="g-col12 g-gutter">
+				<div class="grid-styles">12/12</div>
+			</div>
+		</div>
+		<div class="g-row page-wrap">
+			<div class="g-col6 g-gutter">
+				<div class="grid-styles">6/12</div>
+			</div>
+			<div class="g-col6 g-gutter">
+				<div class="grid-styles">6/12</div>
+			</div>
+		</div>
+		<div class="g-row page-wrap">
+			<div class="g-col4 g-gutter">
+				<div class="grid-styles">4/12</div>
+			</div>
+			<div class="g-col4 g-gutter">
+				<div class="grid-styles">4/12</div>
+			</div>
+			<div class="g-col4 g-gutter">
+				<div class="grid-styles">4/12</div>
+			</div>
+		</div>
+		<div class="g-row page-wrap">
+			<div class="g-col3 g-gutter">
+				<div class="grid-styles">3/12</div>
+			</div>
+			<div class="g-col3 g-gutter">
+				<div class="grid-styles">3/12</div>
+			</div>
+			<div class="g-col3 g-gutter">
+				<div class="grid-styles">3/12</div>
+			</div>
+			<div class="g-col3 g-gutter">
+				<div class="grid-styles">3/12</div>
+			</div>
+		</div>
+		<div class="g-row page-wrap">
+			<div class="g-col4 g-gutter">
+				<div class="grid-styles">4/12</div>
+			</div>
+			<div class="g-col8 g-gutter">
+				<div class="grid-styles">8/12</div>
+			</div>
+		</div>
+		<div class="g-row page-wrap">
+			<div class="g-col8 g-gutter">
+				<div class="grid-styles">8/12</div>
+			</div>
+			<div class="g-col4 g-gutter">
+				<div class="grid-styles">4/12</div>
+			</div>
+		</div>
+		
+		<div class="g-row page-wrap">
+			<div class="g-col8">
+				<div class="g-row">
+					<div class="g-col12 g-gutter">
+						<div class="grid-substyles">(sub) 12/12</div>
+					</div>
+				</div>
+			</div>
+			<div class="g-col4 g-gutter">
+				<div class="grid-styles">4/12</div>
+			</div>
+		</div>
+	
+		<div class="g-row page-wrap">
+			<div class="g-col8">
+				<div class="g-row">
+					<div class="g-col4 g-gutter">
+						<div class="grid-substyles">(sub) 4/12</div>
+					</div>
+					<div class="g-col8 g-gutter">
+						<div class="grid-substyles">(sub) 8/12</div>
+					</div>
+				</div>
+			</div>
+			<div class="g-col4 g-gutter">
+				<div class="grid-styles">4/12</div>
+			</div>
+		</div>
+		
+		<div class="g-row page-wrap">
+			<div class="g-col8">
+				<div class="g-row">
+					<div class="g-col4 g-gutter">
+						<div class="grid-substyles">(sub) 4/12</div>
+					</div>
+					<div class="g-col4 g-gutter">
+						<div class="grid-substyles">(sub) 4/12</div>
+					</div>
+					<div class="g-col4 g-gutter">
+						<div class="grid-substyles">(sub) 4/12</div>
+					</div>
+				</div>
+			</div>
+			<div class="g-col4 g-gutter">
+				<div class="grid-styles">4/12</div>
+			</div>
+		</div>
+		
+		<div class="g-row page-wrap">
+			<div class="g-col8">
+				<div class="g-row">
+					<div class="g-col3 g-gutter">
+						<div class="grid-substyles">(sub) 3/12</div>
+					</div>
+					<div class="g-col3 g-gutter">
+						<div class="grid-substyles">(sub) 3/12</div>
+					</div>
+					<div class="g-col3 g-gutter">
+						<div class="grid-substyles">(sub) 3/12</div>
+					</div>
+					<div class="g-col3 g-gutter">
+						<div class="grid-substyles">(sub) 3/12</div>
+					</div>
+				</div>
+			</div>
+			<div class="g-col4 g-gutter">
+				<div class="grid-styles">4/12</div>
+			</div>
+		</div>
+	
+		<div class="g-row page-wrap">
+			<div class="g-col9 g-gutter">
+				<div class="grid-styles">9/12</div>
+			</div>
+			<div class="g-col3 g-gutter">
+				<div class="grid-styles">3/12</div>
+			</div>
+		</div>
+		
+		<div class="g-row page-wrap">
+			<div class="g-col3 g-gutter">
+				<div class="grid-styles">3/12</div>
+			</div>
+			<div class="g-col9 g-gutter">
+				<div class="grid-styles">9/12</div>
+			</div>
+		</div>
+
+		<h1 class="main-title page-wrap">RTL Grid System - Responsive examples</h1>
+
+		<div class="g-row page-wrap">
+			<div class="g-col6 mql-g-col12 g-gutter">
+				<div class="grid-styles">Content 1</div>
+			</div>
+			<div class="g-col6 mql-g-col12 g-gutter">
+				<div class="grid-styles">Content 2</div>
+			</div>
+		</div>
+
+		<h2 class="main-title page-wrap">------------------------------------------------------------------------------</h2>
+
+		<div class="g-row page-wrap">
+			<div class="g-col6 mql-g-col8 mqm-g-col12 g-gutter">
+				<div class="grid-styles">Content 1</div>
+			</div>
+			<div class="g-col3 mql-g-col4 mqm-g-col6 g-gutter">
+				<div class="grid-styles">Content 2</div>
+			</div>
+			<div class="g-col3 mql-g-col12 mqm-g-col6 g-gutter">
+				<div class="grid-styles">Content 3</div>
+			</div>
+		</div>
+
+		<h2 class="main-title page-wrap">------------------------------------------------------------------------------</h2>
+
+		<div class="g-row page-wrap">
+			<div class="g-col3 mql-g-col6 g-gutter">
+				<div class="grid-styles">Content 1</div>
+			</div>
+			<div class="g-col3 g-flr mql-g-col6 g-gutter">
+				<div class="grid-styles">Content 3</div>
+			</div>
+			<div class="g-col6 g-fll mql-g-col12 g-gutter">
+				<div class="grid-styles">Content 2</div>
+			</div>
+		</div>
+
+		<h2 class="main-title page-wrap">------------------------------------------------------------------------------</h2>
+
+		<div class="g-row page-wrap">
+			<div class="g-col3 mql-g-col6 g-gutter">
+				<div class="grid-styles">Content 1</div>
+			</div>
+			<div class="g-col3 mql-g-col6 g-gutter">
+				<div class="grid-styles">Content 2</div>
+			</div>
+			<div class="g-col6 mql-g-col12">
+				<div class="g-row">
+					<div class="g-col6 g-gutter">
+						<div class="grid-substyles">Content 3</div>
+					</div>
+					<div class="g-col6 g-gutter">
+						<div class="grid-substyles">Content 4</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+	</body>
+</html>

@@ -1,0 +1,13 @@
+// config
+$old-ie: false;
+$px-only: false;
+$media-queries: true;
+
+// sass modules: functions, mixins, includes
+@import "sass-module/_import.scss";
+
+// partials: website config, colors, typos, reset, tricks
+@import "partial/_import.scss";
+
+// website layout: grid
+@import "layout/_import.scss";

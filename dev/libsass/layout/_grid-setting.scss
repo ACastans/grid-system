@@ -1,0 +1,61 @@
+/* Common Layout
+----------------------------------------- */
+.page-wrap,
+.page-wrap-fluid {
+	margin:0 auto;
+}
+
+.page-top-padding {
+	padding-top:u(1.25rem);
+}
+.skin-link {
+	display:none; // avoid a skin-link displayed without skin.css injected
+}
+
+@if ($responsive-liquid == false) {
+
+	/* Agressive responsive mode */
+	.page-wrap {
+		max-width:u($website-4cols-size);
+	}
+	@include mq('large'){
+		.page-wrap {
+			max-width:u($website-3cols-size);
+		}
+	}
+	@include mq('medium'){
+		.page-wrap {
+			max-width:u($website-2cols-size);
+		}
+	}
+	@include mq('small'){
+		.page-wrap {
+			max-width:u($website-1col-size);
+		}
+	}
+
+}@else {
+
+	/* Liquid responsive mode */
+	.page-wrap {
+		max-width:u($website-4cols-size); 
+	}
+	
+}
+
+/* If media-queries are disabled, set the page width equal to the largest col */
+@if ($media-queries == false) {
+	.page-wrap {
+		width:u($website-4cols-size);
+	}
+}
+
+/* Page wrap fluid isn't related to page wrap and all reponsive stuff */
+.page-wrap-fluid {
+	max-width:u($website-4cols-size);
+}
+@include old-ie {
+	.page-wrap-fluid {
+		width:u($website-4cols-size);
+	}
+}
