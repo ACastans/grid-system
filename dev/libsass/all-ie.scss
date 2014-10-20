@@ -3,11 +3,11 @@ $old-ie: true;
 $px-only: true;
 $media-queries: false;
 
-// sass modules: functions, mixins, includes
-@import "sass-module/_import.scss";
+@import "lib/_functions.scss";
+@import "lib/_common-mixins.scss";
+@import "lib/_reset.scss";
 
-// partials: website config, colors, typos, reset, tricks
-@import "partial/_import.scss";
+@import "layout/_website-config.scss";
+@import "layout/_grid-setting.scss";
+@import "layout/_grid.scss";
 
-// website layout: grid
-@import "layout/_import.scss";
