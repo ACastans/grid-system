@@ -1,0 +1,161 @@
+/* MediaQueries Large State */
+@media (max-width:$grid-large-bp){
+	
+	/* Grid Columns */
+	.mql-g-col1,
+	.mql-g-col2,
+	.mql-g-col3,
+	.mql-g-col4,
+	.mql-g-col5,
+	.mql-g-col6,
+	.mql-g-col7,
+	.mql-g-col8,
+	.mql-g-col9,
+	.mql-g-col10,
+	.mql-g-col11 {
+		float:left;
+		clear:none;
+	}
+	.mql-g-col1 {
+		width:8.33333333%;
+	}
+	.mql-g-col2 {
+		width:16.66666667%;
+	}
+	.mql-g-col3 {
+		width:25%;
+	}
+	.mql-g-col4 {
+		width:33.33333333%;
+	}
+	.mql-g-col5 {
+		width:41.66666667%;
+	}
+	.mql-g-col6 {
+		width:50%;
+	}
+	.mql-g-col7 {
+		width:58.33333333%;
+	}
+	.mql-g-col8 {
+		width:66.66666667%;
+	}
+	.mql-g-col9 {
+		width:75%;
+	}
+	.mql-g-col10 {
+		width:83.33333333%;
+	}
+	.mql-g-col11 {
+		width:91.66666667%;
+	}
+	.mql-g-col12 {
+		width:100%;
+		float:none;
+		clear:both;
+	}
+
+	/* Grid Floats */
+	.mql-g-flr {
+		float: right;
+	}
+	.mql-g-fll {
+		float: left;
+	}
+	.mql-g-fln {
+		float: none;
+	}
+
+}
+
+/* MediaQueries Medium State */
+@media (max-width:$grid-medium-bp){
+	
+	/* Grid Columns */
+	.mqm-g-col1,
+	.mqm-g-col2,
+	.mqm-g-col3,
+	.mqm-g-col4,
+	.mqm-g-col5,
+	.mqm-g-col6,
+	.mqm-g-col7,
+	.mqm-g-col8,
+	.mqm-g-col9,
+	.mqm-g-col10,
+	.mqm-g-col11 {
+		float:left;
+		clear:none;
+	}
+	.mqm-g-col1 {
+		width:8.33333333%;
+	}
+	.mqm-g-col2 {
+		width:16.66666667%;
+	}
+	.mqm-g-col3 {
+		width:25%;
+	}
+	.mqm-g-col4 {
+		width:33.33333333%;
+	}
+	.mqm-g-col5 {
+		width:41.66666667%;
+	}
+	.mqm-g-col6 {
+		width:50%;
+	}
+	.mqm-g-col7 {
+		width:58.33333333%;
+	}
+	.mqm-g-col8 {
+		width:66.66666667%;
+	}
+	.mqm-g-col9 {
+		width:75%;
+	}
+	.mqm-g-col10 {
+		width:83.33333333%;
+	}
+	.mqm-g-col11 {
+		width:91.66666667%;
+	}
+	.mqm-g-col12 {
+		width:100%;
+		float:none;
+		clear:both;
+	}
+
+	/* Grid Floats */
+	.mqm-g-flr {
+		float: right;
+	}
+	.mqm-g-fll {
+		float: left;
+	}
+	.mqm-g-fln {
+		float: none;
+	}
+
+}
+
+/* MediaQueries Small State (stack all by default) */
+@media (max-width:$grid-small-bp){
+	
+	/* Grid Columns */	
+	.g-col1,
+	.g-col2,
+	.g-col3,
+	.g-col4,
+	.g-col6,
+	.g-col7,
+	.g-col8,
+	.g-col9,
+	.g-col10,
+	.g-col11,
+	.g-col12 {
+		float:none;
+		clear:both;
+		width:100%;
+	}
+
+}

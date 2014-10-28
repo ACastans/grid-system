@@ -1,0 +1,87 @@
+/* RTLnet Grid System
+----------------------------------------- */
+
+/* Grid Row */		
+.g-row {
+	clear:both;
+	width:100%;
+}
+.g-row:before,
+.g-row:after {
+	content:"";
+	display:table;
+}
+.g-row:after {
+	clear:both;
+}
+
+/* Grid Gutter */
+.g-gutter {
+	padding-left:$grid-gutters;
+	padding-right:$grid-gutters;
+}
+
+/* Grid Columns */
+.g-col1,
+.g-col2,
+.g-col3,
+.g-col4,
+.g-col5,
+.g-col6,
+.g-col7,
+.g-col8,
+.g-col9,
+.g-col10,
+.g-col11 {
+	float:left;
+	clear:none;
+}
+.g-col1 {
+	width:8.33333333%;
+}
+.g-col2 {
+	width:16.66666667%;
+}
+.g-col3 {
+	width:25%;
+}
+.g-col4 {
+	width:33.33333333%;
+}
+.g-col5 {
+	width:41.66666667%;
+}
+.g-col6 {
+	width:50%;
+}
+.g-col7 {
+	width:58.33333333%;
+}
+.g-col8 {
+	width:66.66666667%;
+}
+.g-col9 {
+	width:75%;
+}
+.g-col10 {
+	width:83.33333333%;
+}
+.g-col11 {
+	width:91.66666667%;
+}
+.g-col12 {
+	width:100%;
+	float:none;
+	clear:both;
+}
+
+/* Grid Floats */
+.g-flr {
+	float: right;
+}
+.g-fll {
+	float: left;
+}
+.g-fln {
+	float: none;
+}
